@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       # modify the following line with your Docker Hub account name
-      - image: docker.io/hutaojiazidocker/h365:0.4
+      - image: docker.io/hutaojiazidocker/h365:0.1
         name: store-demo
         ports:
         - containerPort: 8080

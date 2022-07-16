@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: store-demo
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: store-demo
+  template:
+    metadata:
+      labels:
+        app: store-demo
+    spec:
+      containers:
+      # modify the following line with your Docker Hub account name
+      - image: docker.io/hutaojiazidocker/h365:0.3
+        name: store-demo
+        ports:
+        - containerPort: 8080
